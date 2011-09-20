@@ -19,14 +19,6 @@ sub OnLoad {
 
 sub OnUserRaw {
 	my ($self, $line) = @_;
-	if( $line =~ /PUSH / ) {
-		if( $line =~ /add-device/ ) {
-			# register the client
-		}
-		elsif ( $line =~ /remove-device\: /) {
-			
-		}
-	}
 }
 
 sub OnPrivNotice {
@@ -47,6 +39,26 @@ sub OnChanMsg {
 
 sub OnModCommand {
 	my ($self, $command)= @_;
+	switch($command) {
+		case /^add/i {
+			#add this znc to push server
+		}
+		case /^remove/i {
+			#remove this znc from push server
+		}
+		case /^status/i {
+			#get push status
+		}
+		case /^set/i {
+			#set a configuration variable
+		}
+		case /^get/i {
+			#get a configuration variable
+		}
+	}
+	if ($command =~ /^add/) {
+		# add this znc to push server
+	}
 }
 
 sub Test {
