@@ -5,6 +5,10 @@
 package androidpush;
 use base 'ZNC::Module';
 
+use constant HOST => 'somewhere.com';
+use constant PORT => 1234;
+
+
 sub description {
     "Pushes to somewhere else yet undetermined"
 }
@@ -15,6 +19,14 @@ sub OnLoad {
 
 sub OnUserRaw {
 	my ($self, $line) = @_;
+	if( $line =~ /PUSH / ) {
+		if( $line =~ /add-device/ ) {
+			# register the client
+		}
+		elsif ( $line =~ /remove-device\: /) {
+			
+		}
+	}
 }
 
 sub OnPrivNotice {

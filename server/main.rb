@@ -1,4 +1,7 @@
+require 'rubygems'
+require 'eventmachine'
 require 'sinatra'
+require 'em-c2dm'
 
 get '/' do
 
