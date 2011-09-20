@@ -44,3 +44,31 @@ sub Test {
 sub Push {
 	my ($self, $nick, $message, $channel, $hilite, $iBadge) = @_;
 }
+
+sub OnClientLogin {
+	$self = shift;	
+}
+
+sub OnClientDisconnect {
+	$self = shift;
+}
+
+sub OnUserAction {
+	my ($self, $target, $message) = @_;
+}
+
+sub OnUserMsg {
+	my ($self, $target, $message) = @_;
+}
+
+sub OnUserNotice {
+	my ($self, $target, $message) = @_;
+}
+
+sub OnUserJoin {
+	my ($self, $channel, $key) = @_;
+}
+
+sub OnUserPart {
+	my ($self, $channel, $message) = @_;
+}
