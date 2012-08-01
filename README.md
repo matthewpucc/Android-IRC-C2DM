@@ -1,0 +1,3 @@
+# We Stand on the Shoulders of Giants
+
+The c2dm scene on android has changed significantly since I first tried to start this project. There are now many great push apps with well documented api's. [jreese](https://github.com/jreese) has done a great job with writing a znc plugin called [znc-push](https://github.com/jreese/znc-push). It will push to many existing push services and can easily be configured to push to new ones. I have a modifed version [here](https://github.com/matthewpucc/znc-push) that does not push message data. It will just push username and channel information to your service.
